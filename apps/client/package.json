@@ -1,11 +1,11 @@
 {
-  "name": "client",
+  "name": "client-part",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "npm run lint && vite build",
+    "dev": "concurrently --kill-others-on-fail \" rm -rf dist && vite build --mode ssr --watch\" \"vite build --mode client --watch\"",
+    "build": "rm -rf dist && vite build --mode ssr && vite build --mode client",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
     "test": "vitest run",
@@ -25,9 +25,6 @@
     "vite": "6.0.11"
   },
   "dependencies": {
-    "@lottiefiles/dotlottie-svelte": "0.4.5",
-    "@mateothegreat/svelte5-router": "0.1.38",
-    "@panteautomaten/server-types": "1.0.0",
     "@tailwindcss/vite": "4.0.0",
     "clsx": "2.1.1",
     "svelte-confetti": "2.3.1",

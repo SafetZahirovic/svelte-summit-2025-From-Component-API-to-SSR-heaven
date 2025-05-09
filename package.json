@@ -16,7 +16,7 @@
     "compose:down": "docker-compose down"
   },
   "workspaces": [
-    "apps/*",
+    "apps/**/*",
     "packages/*"
   ],
   "packageManager": "npm@10.9.2",
@@ -24,7 +24,11 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "9.19.0",
+    "concurrently": "9.1.2",
     "eslint": "9.19.0",
+    "nodemon": "3.1.10",
+    "rollup-plugin-multi-input": "1.5.0",
+    "ts-node": "10.9.2",
     "turbo": "2.3.4",
     "typescript": "5.7.3",
     "typescript-eslint": "8.21.0",
@@ -34,6 +38,15 @@
     "node": ">=23.6.0"
   },
   "dependencies": {
+    "@fastify/middie": "9.0.3",
+    "@fastify/swagger": "9.5.0",
+    "@fastify/swagger-ui": "5.2.2",
+    "@fastify/websocket": "11.0.2",
+    "@olefjaerestad/hmr": "0.0.10",
+    "@rollup/plugin-node-resolve": "16.0.1",
+    "rollup-plugin-visualizer": "5.14.0",
+    "vite-plugin-node": "5.0.1",
+    "vite-plugin-singlefile": "2.2.0",
     "zod": "3.24.1"
   }
 }

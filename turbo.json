@@ -7,23 +7,6 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**"]
     },
-    "test": {
-      "dependsOn": ["^test"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"]
-    },
-    "test:watch": {
-      "dependsOn": ["^test:watch"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"]
-    },
-    "prisma:generate": {
-      "dependsOn": ["^prisma:generate"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"]
-    },
-    "prisma:migrate": {
-      "dependsOn": ["^prisma:migrate"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"]
-    },
-    "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
